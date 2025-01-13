@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="calc1" class="calculator">
+        <div id="c1">
+            <input type="text" id="screen" class="calculator-screen" disabled>
+        </div>
+        <div class="calculator-keys">
+            <button class="all-clear" onclick="clearScreen()">AC</button>
+            <button class="backspace" onclick="backspace()">C</button>
+            <button class="operator" onclick="toggleExpand()">Expand</button>
+            <button class="operator" onclick="calculatePercentage()">%</button>
+            <button class="operator" onclick="append('/')">/</button>
+
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('9')">9</button>
+            <button class="operator" onclick="append('*')">x</button>
+
+            <button onclick="append('4')">4</button>
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button class="operator" onclick="append('-')">-</button>
+
+            <button onclick="append('1')">1</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button>
+            <button class="operator" onclick="append('+')">+</button>
+
+            <button onclick="append('0')">0</button>
+            <button class="decimal" onclick="append('.')">.</button>
+            <button class="equal-sign" onclick="calculate()">=</button>
+        </div>
+        <div id="expand-operations" style="display: none;">
+            <button onclick="calculateTrig('sin')">sin</button>
+            <button onclick="calculateTrig('cos')">cos</button>
+            <button onclick="calculateTrig('tan')">tan</button>
+            <button onclick="calculateRoot()">√</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
