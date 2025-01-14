@@ -27,7 +27,13 @@ function backspace() {
 
 // Toggle expand operations
 function toggleExpand() {
-    expandOperations.style.display = expandOperations.style.display === 'none' ? 'flex' : 'none';
+    if (expandOperations.style.display === 'none' || expandOperations.style.display === '') {
+        expandOperations.style.display = 'flex';
+        document.getElementById("o1").innerHTML = "Collapse";
+    } else {
+        expandOperations.style.display = 'none';
+        document.getElementById("o1").innerHTML = "Expand";
+    }
 }
 
 // Trigonometric functions
