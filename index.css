@@ -1,55 +1,76 @@
+/* Set background color for the entire page */
 body {
     background-color: rgb(238, 238, 235);
 }
 
+/* Calculator container styling */
 #calc1 {
     margin: 100px auto;
     width: 300px;
     background-color: black;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(242, 233, 233, 0.2);
 }
 
+/* Screen styling */
 .calculator-screen {
     width: 100%;
-    height: 50px;
     background-color: rgb(154, 152, 152);
+    height: 50px;
     margin-bottom: 10px;
     text-align: right;
     font-size: 18px;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    color:black
+    color: black;
 }
 
+/* Button styling */
 button {
-    padding: 15px;
-    margin: 5px;
+    padding: 20px;
+    margin: 0;
     font-size: 18px;
     border: none;
     border-radius: 5px;
     background-color: #f1f1f1;
     cursor: pointer;
+    text-align: center;
 }
 
 button:hover {
     background-color: #ddd;
 }
 
+/* Calculator keys grid layout */
 .calculator-keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
+/* Red color for the AC button */
+#c0 {
+    background-color: rgb(243, 7, 7);
+    color: white;
+}
+
+/* Expandable operations - Flexbox layout for proper alignment */
 #expand-operations {
-    display: none;
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: space-between;
     gap: 10px;
+    padding-top: 10px;
+}
+
+#expand-operations button {
+    flex: 1;
+    padding: 20px;
+    font-size: 18px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin: 0;
 }
 
 /* Media query for smaller screens */
@@ -60,7 +81,7 @@ button:hover {
     }
 
     button {
-        padding: 10px;
+        padding: 15px;
         font-size: 16px;
     }
 
