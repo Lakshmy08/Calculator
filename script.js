@@ -29,10 +29,10 @@ function backspace() {
 function toggleExpand() {
     if (expandOperations.style.display === 'none' || expandOperations.style.display === '') {
         expandOperations.style.display = 'flex';
-        document.getElementById("o1").innerHTML = "Collapse";
+        document.getElementById("o1").innerHTML = "Col";
     } else {
         expandOperations.style.display = 'none';
-        document.getElementById("o1").innerHTML = "Expand";
+        document.getElementById("o1").innerHTML = "Exp";
     }
 }
 
