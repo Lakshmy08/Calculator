@@ -12,10 +12,10 @@
             <input type="text" id="screen" class="calculator-screen" disabled>
         </div>
         <div class="calculator-keys">
+            <button class="operator" onclick="calculatePercentage()">%</button>
+            <button class="operator" id="o1" onclick="toggleExpand()">Exp</button>
             <button class="all-clear" onclick="clearScreen()">AC</button>
             <button class="backspace" onclick="backspace()">C</button>
-            <button class="operator" id="o1" onclick="toggleExpand()">Exp</button>
-            <button class="operator" onclick="calculatePercentage()">%</button>
             <button class="operator" onclick="append('/')">/</button>
 
             <button onclick="append('7')">7</button>
@@ -32,9 +32,9 @@
             <button onclick="append('2')">2</button>
             <button onclick="append('3')">3</button>
             <button class="operator" onclick="append('+')">+</button>
-
-            <button onclick="append('0')">0</button>
             <button class="decimal" onclick="append('.')">.</button>
+            <button onclick="append('0')">0</button>
+            
             <button class="equal-sign" onclick="calculate()">=</button>
         </div>
         <div id="expand-operations" style="display: none;">
